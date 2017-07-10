@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE'
+    }
+}
+
+apply plugin: 'application'
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-devtools')
+    compile('org.springframework.boot:spring-boot-starter-log4j2')
+
+    compile('org.codehaus.groovy:groovy:2.4.12')
+    compile('com.google.guava:guava:22.0')
+    compile('joda-time:joda-time:2.9')
+
+    testCompile('org.springframework:spring-test')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.spockframework:spock-core:1.1-groovy-2.4')
+    testCompile('org.spockframework:spock-spring:1.1-groovy-2.4')
+    testCompile('org.unitils:unitils-core:3.4.2')
+}
+
+jar {
+    version =  '0.1.0'
+}
+
+distTar {
+    enabled = false
+}
