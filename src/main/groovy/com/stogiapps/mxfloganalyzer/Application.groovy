@@ -18,12 +18,19 @@ class Application implements CommandLineRunner {
     }
 
     @Override
-    void run(String... args) {
-        def inputFilePath = args[0]
-        def logDirectoryPath = args[1]
-        def outputFilePath = args[2]
+    void run(String... arguments) {
+        checkIfValid(arguments)
+
+        def inputFilePath = arguments[0]
+        def logDirectoryPath = arguments[1]
+        def outputFilePath = arguments[2]
 
         mxfLogAnalyzer.analyze(inputFilePath, logDirectoryPath, outputFilePath)
     }
 
+    private void checkIfValid(String... arguments) {
+        if (arguments.size() < 3) {
+            InvalidNumberOfArgumentsException.throwNow()
+        }
+    }
 }
