@@ -18,6 +18,10 @@ class MxfFileTransferStatistic {
         new MxfFileTransferStatistic(fileNames, serverName, LocalTime.parse(startTime), null)
     }
 
+    static MxfFileTransferStatistic create(Set<String> fileNames) {
+        new MxfFileTransferStatistic(fileNames, null, null, null)
+    }
+
     Set<String> fileNames
     String serverName
     LocalTime startTime
@@ -25,7 +29,7 @@ class MxfFileTransferStatistic {
 
     @Override
     String toString() {
-        """ "${fileNames.join(';')}","${serverName}","${startTime}","${endTime ?: ''}" """.trim()
+        """ "${fileNames.join(';')}","${serverName ?: ''}","${startTime ?: ''}","${endTime ?: ''}" """.trim()
     }
 
 }

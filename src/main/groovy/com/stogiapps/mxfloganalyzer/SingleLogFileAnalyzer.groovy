@@ -45,7 +45,7 @@ final class SingleLogFileAnalyzer {
             previousLine = currentLine
         }
 
-        statisticsById.values()
+        statisticsById.values() ?: [MxfFileTransferStatistic.create(fileNamesFoundInLogFile)] as Set
     }
 
     private Set<String> findFileNamesIn(File logFile, Set<String> fileNames) {

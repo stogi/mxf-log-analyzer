@@ -2,7 +2,6 @@ package com.stogiapps.mxfloganalyzer
 
 import groovy.io.FileType
 import groovy.transform.PackageScope
-import org.springframework.beans.factory.annotation.Autowire
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
@@ -11,25 +10,41 @@ import org.springframework.stereotype.Component
 final class MxfLogAnalyzer {
 
     @Autowired
-    private final SingleLogFileAnalyzer singleLogFileAnalyzer
+    private SingleLogFileAnalyzer singleLogFileAnalyzer
 
-    void analyze(String inputFilePath, String logDirectoryPath) {
-        def inputFileNames = new File(inputFilePath).readLines() as Set
+    void analyze(String inputFilePath, String logDirectoryPath, String outputFilePath) {
+        def inputFileNames = getAllInputFileNamesFrom(inputFilePath)
+        def logFiles = getAllLogFilesIn(logDirectoryPath)
+        def statistics = internalAnalyze(logFiles, inputFileNames)
+        saveTo(outputFilePath, statistics)
+    }
 
+    private Set<String> getAllInputFileNamesFrom(String inputFilePath) {
+        new File(inputFilePath).readLines() as Set
+    }
+
+    private List<File> getAllLogFilesIn(String logDirectoryPath) {
         def logDirectory = new File(logDirectoryPath)
-
         def logFiles = []
-        logDirectory.eachFileRecurse (FileType.FILES) { file ->
+        logDirectory.eachFileRecurse(FileType.FILES) { file ->
             logFiles << file
         }
+        logFiles
+    }
 
+    private List<MxfFileTransferStatistic> internalAnalyze(List logFiles, inputFileNames) {
         def statistics = []
         logFiles.each { File logFile ->
-            statistics  += singleLogFileAnalyzer.analyze(logFile, inputFileNames)
-
+            statistics += singleLogFileAnalyzer.analyze(logFile, inputFileNames)
         }
+        statistics
+    }
 
-        statistics.each { println it.toString() }
+    private void saveTo(String outputFilePath, List<MxfFileTransferStatistic> statistics) {
+        def outputFile = new File(outputFilePath)
+        statistics.each { MxfFileTransferStatistic statistic ->
+            outputFile << statistic.toString() << '\n'
+        }
     }
 
 }

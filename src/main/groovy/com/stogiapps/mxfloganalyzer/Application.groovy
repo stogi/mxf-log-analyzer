@@ -18,8 +18,12 @@ class Application implements CommandLineRunner {
     }
 
     @Override
-    void run(String... args) throws Exception {
-        mxfLogAnalyzer.analyze(args[0], args[1])
+    void run(String... args) {
+        def inputFilePath = args[0]
+        def logDirectoryPath = args[1]
+        def outputFilePath = args[2]
+
+        mxfLogAnalyzer.analyze(inputFilePath, logDirectoryPath, outputFilePath)
     }
 
 }
