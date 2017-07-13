@@ -1,0 +1,496 @@
+15:39:27.583 (0) GMT Jul 4, 2017 Signiant Supervisor V11.4.0[70633] (logbase: ToEricssonPlayoutDual-ToEricssonPlayoutDual301714_1.18484) starts on lmc01n02.national.core.bbc.co.uk
+  The Signiant supervisor V11.4.0[70633] (logbase: ToEricssonPlayoutDual-ToEricssonPlayoutDual301714_1.18484).
+15:39:27.583 (0) Extracting context 'admin+ToEricssonPlayoutDual' 'ToEricssonPlayoutDual'
+  SCHD_CTRL_PORT=39989
+  Execution counts - groups: 19. links: 0, job components: 12
+15:39:28.553 (4) Starting group: ToEricssonPlayoutDual (decision)
+15:39:28.711 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent (decision)
+15:39:28.712 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent' property mapping command
+15:39:28.781 (7) Adding package variable: Inputs.Target=''
+15:39:28.781 (7) Adding package variable: Inputs.Target.tgt_node_list='fgbwcapfbdb125.national.core.bbc.co.uk'
+15:39:28.781 (7) Adding package variable: Inputs.Target.postTXAgent='fgbwcfsfbdb187'
+15:39:28.781 (7) Adding package variable: Inputs.Target.sourceData='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf'
+15:39:28.781 (7) Adding package variable: Inputs.Target.preTXAgent='fgbwcfsfbdb119'
+15:39:28.781 (7) Adding package variable: Inputs.Target.postTX2Isilon='MSS_Agents!9'
+15:39:28.781 (7) Adding package variable: Inputs.Transport=''
+15:39:28.781 (7) Adding package variable: Inputs.Options=''
+15:39:28.897 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent
+15:39:29.511 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The channel to fgbwcapfbdb125 is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:29.601 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The channel to fgbwcapfbdb125 is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:29.623 (7) Message from fgbwcapfbdb125 - Command agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:29.739 (7) Message from fgbwcapfbdb125 - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    Executing Command component: FBDiAChooseSourceAgent
+15:39:39.796 (7) Message from fgbwcapfbdb125 - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The Default agent is : fgbwcapfbdb125.national.core.bbc.co.uk
+15:39:39.796 (7) Message from fgbwcapfbdb125 - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The PreTX agent is : fgbwcfsfbdb119
+15:39:39.796 (7) Message from fgbwcapfbdb125 - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The PostTX agent is : fgbwcfsfbdb187
+15:39:39.796 (7) Message from fgbwcapfbdb125 - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The PostTX2 agent is : MSS_Agents!9
+15:39:39.796 (7) Message from fgbwcapfbdb125 - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The file to transfer is : /fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf
+15:39:39.796 (7) Message from fgbwcapfbdb125 - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+    The selected agent is : MSS_Agents!9
+15:39:39.841 (7) Message from fgbwcapfbdb125 - Target agent completion command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent]:
+
+15:39:39.972 (4) Finished job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.FBDiAChooseSourceAgent
+15:39:40.142 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList (decision)
+15:39:40.143 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList' property mapping command
+15:39:40.179 (7) Adding package variable: Inputs.Source=''
+15:39:40.179 (7) Adding package variable: Inputs.Source.tgt_node_list='MSS_Agents!9'
+15:39:40.179 (7) Adding package variable: Inputs.Source.SourcePaths='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf'
+15:39:40.179 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+15:39:40.179 (7) Adding package variable: Inputs.Source.ExcludeFiles=''
+15:39:40.179 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='All'
+15:39:40.179 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+15:39:40.179 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='Date/Time & Size'
+15:39:40.179 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='5'
+15:39:40.179 (7) Adding package variable: Inputs.Source.tgt_user='%dds_default_user%'
+15:39:40.179 (7) Adding package variable: Inputs.Source.fileDate=''
+15:39:40.179 (7) Adding package variable: Inputs.Transport=''
+15:39:40.179 (7) Adding package variable: Inputs.Options=''
+15:39:40.368 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList
+15:39:40.945 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+    The channel to fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:41.018 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+    The channel to fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:41.040 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Command agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:41.127 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+    Executing FileList component: FileList
+15:39:41.127 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+    DdsSourceTempDir=/tmp
+15:39:48.407 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+    Generating File List...
+15:39:48.407 (7) SourceAgent: [fgbw1fsmed1002.national.core.bbc.co.uk]
+15:39:48.407 (7) SourceAgentPlatform: [x86_64-Linux-RH6]
+15:39:48.407 (7) SourceAgentUserid: [sigadmin]
+15:39:48.407 (7) SourceHost: [MSS_Agents!9]
+15:39:48.407 (7) SourcePaths: [/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf]
+15:39:48.407 (7) IncludeFiles: [*]
+15:39:48.407 (7) ExcludeFiles: []
+15:39:48.407 (7) ExcludeSubdirectories: [All]
+15:39:48.407 (7) ExcludeSubDirList: []
+15:39:48.408 (7) FileReadinessCheckType: [Date/Time & Size]
+15:39:48.408 (7) FileReadinessCheckDelay: [5]
+15:39:48.419 (7) Findfiles command: [not required - no directory paths specified]
+15:39:53.582 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target agent completion command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList]:
+
+15:39:53.721 (4) Finished job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.FileList
+15:39:53.871 (4) Starting group:    ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group (concurrent).
+15:39:53.871 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1 (decision)
+15:39:53.907 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2 (decision)
+15:39:54.056 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1 (decision)
+15:39:54.056 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1' property mapping command
+15:39:54.091 (7) Adding package variable: Inputs.Source=''
+15:39:54.091 (7) Adding package variable: Inputs.Source.tgt_node_list='MSS_Agents!9'
+15:39:54.091 (7) Adding package variable: Inputs.Source.baseFolder='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf'
+15:39:54.091 (7) Adding package variable: Inputs.Source.SourcePaths='<SIGLIST TYPE='PATHLIST' XATTRS='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' ><EL S='63004783479' T='F' MT='2016-04-08T12:54:41Z' V='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' /> </SIGLIST>'
+15:39:54.091 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+15:39:54.091 (7) Adding package variable: Inputs.Source.ExcludeFiles=''
+15:39:54.091 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='All'
+15:39:54.091 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+15:39:54.091 (7) Adding package variable: Inputs.Source.fileDateFilter=''
+15:39:54.091 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+15:39:54.091 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='0'
+15:39:54.091 (7) Adding package variable: Inputs.Source.tgt_user='%dds_default_user%'
+15:39:54.091 (7) Adding package variable: Inputs.Source.includeFoldersinOutputList='no'
+15:39:54.091 (7) Adding package variable: Inputs.Source.outputManifestFile='no'
+15:39:54.091 (7) Adding package variable: Inputs.Transport=''
+15:39:54.091 (7) Adding package variable: Inputs.Options=''
+15:39:54.202 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2 (decision)
+15:39:54.203 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2' property mapping command
+15:39:54.248 (7) Adding package variable: Inputs.Source=''
+15:39:54.248 (7) Adding package variable: Inputs.Source.tgt_node_list='MSS_Agents!9'
+15:39:54.248 (7) Adding package variable: Inputs.Source.baseFolder='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf'
+15:39:54.248 (7) Adding package variable: Inputs.Source.SourcePaths='<SIGLIST TYPE='PATHLIST' XATTRS='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' ><EL S='63004783479' T='F' MT='2016-04-08T12:54:41Z' V='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' /> </SIGLIST>'
+15:39:54.248 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+15:39:54.248 (7) Adding package variable: Inputs.Source.ExcludeFiles=''
+15:39:54.248 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='All'
+15:39:54.248 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+15:39:54.248 (7) Adding package variable: Inputs.Source.fileDateFilter=''
+15:39:54.248 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+15:39:54.248 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='0'
+15:39:54.248 (7) Adding package variable: Inputs.Source.tgt_user='%dds_default_user%'
+15:39:54.248 (7) Adding package variable: Inputs.Source.includeFoldersinOutputList='no'
+15:39:54.248 (7) Adding package variable: Inputs.Source.outputManifestFile='no'
+15:39:54.248 (7) Adding package variable: Inputs.Transport=''
+15:39:54.248 (7) Adding package variable: Inputs.Options=''
+15:39:54.364 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1
+15:39:54.804 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2
+15:39:54.832 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    The channel to fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:54.990 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    The channel to fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:55.011 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Command agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:55.108 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    Executing FileList component: FileListToManifest1
+15:39:55.298 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    The channel to fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:55.391 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    The channel to fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:55.419 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Command agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:39:55.496 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    Executing FileList component: FileListToManifest2
+15:40:00.396 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    Generating File List...
+15:40:00.396 (7) SourceAgent: [fgbw1fsmed1001.national.core.bbc.co.uk]
+15:40:00.397 (7) SourceAgentPlatform: [x86_64-Linux-RH6]
+15:40:00.397 (7) SourceAgentUserid: [sigadmin]
+15:40:00.397 (7) SourceHost: [MSS_Agents!9]
+15:40:00.398 (7) SourcePaths: [/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf]
+15:40:00.398 (7) IncludeFiles: [*]
+15:40:00.400 (7) ExcludeFiles: []
+15:40:00.400 (7) ExcludeSubdirectories: [All]
+15:40:00.400 (7) ExcludeSubDirList: []
+15:40:00.401 (7) FileReadinessCheckType: [None]
+15:40:00.401 (7) FileReadinessCheckDelay: [0]
+15:40:00.410 (7) Findfiles command: [not required - no directory paths specified]
+15:40:00.452 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Target process command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    Generating File List...
+15:40:00.452 (7) SourceAgent: [fgbw1fsmed1001.national.core.bbc.co.uk]
+15:40:00.453 (7) SourceAgentPlatform: [x86_64-Linux-RH6]
+15:40:00.453 (7) SourceAgentUserid: [sigadmin]
+15:40:00.453 (7) SourceHost: [MSS_Agents!9]
+15:40:00.454 (7) SourcePaths: [/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf]
+15:40:00.454 (7) IncludeFiles: [*]
+15:40:00.454 (7) ExcludeFiles: []
+15:40:00.455 (7) ExcludeSubdirectories: [All]
+15:40:00.455 (7) ExcludeSubDirList: []
+15:40:00.455 (7) FileReadinessCheckType: [None]
+15:40:00.457 (7) FileReadinessCheckDelay: [0]
+15:40:00.457 (7) Findfiles command: [not required - no directory paths specified]
+15:40:00.561 (4) Finished job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1
+15:40:00.733 (4) Finished job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2
+15:40:00.888 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder (decision)
+15:40:00.891 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder' property mapping command
+15:40:00.962 (7) Adding package variable: Inputs.Source=''
+15:40:00.962 (7) Adding package variable: Inputs.Source.src_node_list='MSS_Agents!9'
+15:40:00.962 (7) Adding package variable: Inputs.Source.SourceData='<SIGLIST TYPE='PATHLIST' XATTRS='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' ><EL S='63004783479' T='F' MT='2016-04-08T12:54:41Z' V='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' /> </SIGLIST>'
+15:40:00.962 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+15:40:00.962 (7) Adding package variable: Inputs.Source.ExcludeFiles=''
+15:40:00.963 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='All'
+15:40:00.963 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+15:40:00.963 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+15:40:00.963 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='10'
+15:40:00.963 (7) Adding package variable: Inputs.Source.SourceDeletionsPostTransfer='none'
+15:40:00.963 (7) Adding package variable: Inputs.Source.SourceDeletionExcludeDirectories=''
+15:40:00.963 (7) Adding package variable: Inputs.Source.src_user='%dds_default_user%'
+15:40:00.963 (7) Adding package variable: Inputs.Target=''
+15:40:00.963 (7) Adding package variable: Inputs.Target.tgt_node_list='Ericsson_North!9'
+15:40:00.963 (7) Adding package variable: Inputs.Target.TargetDirectory='/stornext/MC_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL'
+15:40:00.963 (7) Adding package variable: Inputs.Target.PathMappingOptions=''
+15:40:00.963 (7) Adding package variable: Inputs.Target.maximumJobDateTimeDirectories=''
+15:40:00.963 (7) Adding package variable: Inputs.Target.RemoveTargetFiles='no'
+15:40:00.963 (7) Adding package variable: Inputs.Target.removeExpiredDirsonTarget='no'
+15:40:00.963 (7) Adding package variable: Inputs.Target.RemoveOlderThan='30'
+15:40:00.963 (7) Adding package variable: Inputs.Target.tgt_user='%dds_default_user%'
+15:40:00.963 (7) Adding package variable: Inputs.Target.discardSubFolders='yes'
+15:40:00.963 (7) Adding package variable: Inputs.Transport=''
+15:40:00.963 (7) Adding package variable: Inputs.Transport.udp_transfer='yes'
+15:40:00.963 (7) Adding package variable: Inputs.Transport.udp_aggressiveness='medium'
+15:40:00.963 (7) Adding package variable: Inputs.Transport.throughput_tgt=''
+15:40:00.963 (7) Adding package variable: Inputs.Transport.bw_floor=''
+15:40:00.964 (7) Adding package variable: Inputs.Transport.bw_throttle='0'
+15:40:00.964 (7) Adding package variable: Inputs.Transport.bw_throttle_tod='00:00;00:00;YYYYYYY;0;'
+15:40:00.964 (7) Adding package variable: Inputs.Options=''
+15:40:00.964 (7) Adding package variable: Inputs.Options.certified_delivery='unsigned'
+15:40:00.964 (7) Adding package variable: Inputs.Options.check_type='timesize'
+15:40:00.964 (7) Adding package variable: Inputs.Options.compression='no'
+15:40:00.964 (7) Adding package variable: Inputs.Options.follow_symlinks='yes'
+15:40:00.964 (7) Adding package variable: Inputs.Options.transferFilesInSortedOrder='yes'
+15:40:00.964 (7) Adding package variable: Inputs.Options.rsync='no'
+15:40:00.964 (7) Adding package variable: Inputs.Options.src_file_inuse_action='error'
+15:40:00.964 (7) Adding package variable: Inputs.Options.synchronize='no'
+15:40:00.964 (7) Adding package variable: Inputs.Options.tgt_file_inuse_action='error'
+15:40:00.964 (7) Adding package variable: Inputs.Options.RemoveParentFolder='yes'
+15:40:00.964 (7) Adding package variable: Inputs.Options.verifyforsufficientdiskspacebeforeJobtransfersstart='no'
+15:40:00.964 (7) Adding package variable: Inputs.Options.verifytargetdirectoryexists='no'
+15:40:01.073 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder (decision)
+15:40:01.075 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder' property mapping command
+15:40:01.111 (7) Adding package variable: Inputs.Source=''
+15:40:01.111 (7) Adding package variable: Inputs.Source.src_node_list='MSS_Agents!9'
+15:40:01.111 (7) Adding package variable: Inputs.Source.SourceData='<SIGLIST TYPE='PATHLIST' XATTRS='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' ><EL S='63004783479' T='F' MT='2016-04-08T12:54:41Z' V='/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf' /> </SIGLIST>'
+15:40:01.111 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+15:40:01.111 (7) Adding package variable: Inputs.Source.ExcludeFiles=''
+15:40:01.111 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='All'
+15:40:01.111 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+15:40:01.111 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+15:40:01.111 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='0'
+15:40:01.111 (7) Adding package variable: Inputs.Source.SourceDeletionsPostTransfer='none'
+15:40:01.111 (7) Adding package variable: Inputs.Source.SourceDeletionExcludeDirectories=''
+15:40:01.111 (7) Adding package variable: Inputs.Source.src_user='%dds_default_user%'
+15:40:01.111 (7) Adding package variable: Inputs.Target=''
+15:40:01.111 (7) Adding package variable: Inputs.Target.tgt_node_list='Ericsson_South!9'
+15:40:01.111 (7) Adding package variable: Inputs.Target.TargetDirectory='/stornext/WP_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL'
+15:40:01.112 (7) Adding package variable: Inputs.Target.PathMappingOptions=''
+15:40:01.112 (7) Adding package variable: Inputs.Target.maximumJobDateTimeDirectories=''
+15:40:01.112 (7) Adding package variable: Inputs.Target.RemoveTargetFiles='no'
+15:40:01.112 (7) Adding package variable: Inputs.Target.removeExpiredDirsonTarget='no'
+15:40:01.112 (7) Adding package variable: Inputs.Target.RemoveOlderThan='30'
+15:40:01.112 (7) Adding package variable: Inputs.Target.tgt_user='%dds_default_user%'
+15:40:01.112 (7) Adding package variable: Inputs.Target.discardSubFolders='yes'
+15:40:01.112 (7) Adding package variable: Inputs.Transport=''
+15:40:01.112 (7) Adding package variable: Inputs.Transport.udp_transfer='yes'
+15:40:01.112 (7) Adding package variable: Inputs.Transport.udp_aggressiveness='medium'
+15:40:01.113 (7) Adding package variable: Inputs.Transport.throughput_tgt=''
+15:40:01.113 (7) Adding package variable: Inputs.Transport.bw_floor=''
+15:40:01.113 (7) Adding package variable: Inputs.Transport.bw_throttle=''
+15:40:01.113 (7) Adding package variable: Inputs.Transport.bw_throttle_tod='00:00;00:00;YYYYYYY;0;'
+15:40:01.113 (7) Adding package variable: Inputs.Options=''
+15:40:01.113 (7) Adding package variable: Inputs.Options.certified_delivery='unsigned'
+15:40:01.113 (7) Adding package variable: Inputs.Options.check_type='timesize'
+15:40:01.113 (7) Adding package variable: Inputs.Options.compression='no'
+15:40:01.113 (7) Adding package variable: Inputs.Options.follow_symlinks='yes'
+15:40:01.113 (7) Adding package variable: Inputs.Options.transferFilesInSortedOrder='yes'
+15:40:01.113 (7) Adding package variable: Inputs.Options.rsync='no'
+15:40:01.113 (7) Adding package variable: Inputs.Options.src_file_inuse_action='error'
+15:40:01.113 (7) Adding package variable: Inputs.Options.synchronize='no'
+15:40:01.113 (7) Adding package variable: Inputs.Options.tgt_file_inuse_action='error'
+15:40:01.113 (7) Adding package variable: Inputs.Options.RemoveParentFolder='yes'
+15:40:01.113 (7) Adding package variable: Inputs.Options.verifyforsufficientdiskspacebeforeJobtransfersstart='no'
+15:40:01.113 (7) Adding package variable: Inputs.Options.verifytargetdirectoryexists='no'
+15:40:01.265 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder [(fgbw1fsmed1001.national.core.bbc.co.uk fgbw1fsmed1002.national.core.bbc.co.uk)]
+15:40:01.514 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - File agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:01.570 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The maximum concurrent agent count has been reduced from 8 to 5 because fgbw1fsmed1001 only supports 64 threads per process.
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    Executing SigniantDistribute component: Transfer_1_nosubfolder
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    JobDateTimeStamp: [17-07-04_15-40-01.18597]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceAgent: [fgbw1fsmed1001.national.core.bbc.co.uk]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceAgentPlatform: [x86_64-Linux-RH6]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceAgentUserid: [sigadmin]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceHost: [MSS_Agents!9]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceData: [/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    IncludeFiles: [*]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    ExcludeFiles: []
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    ExcludeSubdirectories: [All]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    ExcludeSubDirList: []
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetHosts: [Ericsson_North!9]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetDirectory: [/stornext/MC_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    PathMappingOptions: []
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SkipParentFolder: [yes]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceDeletionsPostTransfer: [none]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceDeletionExcludeDirectories: []
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    RemoveTargetFiles: [no]
+15:40:01.592 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    RemoveTargetDirs: [no]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    RemoveOlderThan: [30]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    JobLogDetail: [INFO]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    MaximumBandwidthLimit: [00:00;00:00;YYYYYYY;0;]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    WANAcceleratorOn: [yes]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    WANAcceleratorAggressiveness: [medium]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    BandwidthCeiling: []
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    BandwidthFloor: []
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    CompressFiles: [no]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    FollowSymbolicLinks: [yes]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    FileReadinessCheckType: [None]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    FileReadinessCheckDelay: [10]
+15:40:01.593 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    DeliveryMode: [Log File Name]
+15:40:01.613 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source agent setup command (ukmcfdsl02.ebms.tv ukmcfdsl01.ebms.tv) [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    Establishing communication between fgbw1fsmed1001.national.core.bbc.co.uk and ukmcfdsl02.ebms.tv ukmcfdsl01.ebms.tv
+15:40:01.785 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel to ukmcfdsl02.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:02.441 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel to ukmcfdsl02.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:02.441 (7) Message from ukmcfdsl02.ebms.tv - File agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel from fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:02.491 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder [(fgbw1fsmed1001.national.core.bbc.co.uk fgbw1fsmed1002.national.core.bbc.co.uk)]
+15:40:02.796 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - File agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:02.986 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The maximum concurrent agent count has been reduced from 8 to 5 because fgbw1fsmed1002 only supports 64 threads per process.
+15:40:03.018 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    Executing SigniantDistribute component: Transfer_2_nosubfolder
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    JobDateTimeStamp: [17-07-04_15-41-51.07120]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceAgent: [fgbw1fsmed1002.national.core.bbc.co.uk]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceAgentPlatform: [x86_64-Linux-RH6]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceAgentUserid: [sigadmin]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceHost: [MSS_Agents!9]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceData: [/fbd_prod_w1_fbdia-signiant-io/FKAT851R_01.mxf]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    IncludeFiles: [*]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    ExcludeFiles: []
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    ExcludeSubdirectories: [All]
+15:40:03.019 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    ExcludeSubDirList: []
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetHosts: [Ericsson_South!9]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetDirectory: [/stornext/WP_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    PathMappingOptions: []
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SkipParentFolder: [yes]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceDeletionsPostTransfer: [none]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceDeletionExcludeDirectories: []
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    RemoveTargetFiles: [no]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    RemoveTargetDirs: [no]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    RemoveOlderThan: [30]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    JobLogDetail: [INFO]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    MaximumBandwidthLimit: [00:00;00:00;YYYYYYY;0;]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    WANAcceleratorOn: [yes]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    WANAcceleratorAggressiveness: [medium]
+15:40:03.020 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    BandwidthCeiling: []
+15:40:03.021 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    BandwidthFloor: []
+15:40:03.021 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    CompressFiles: [no]
+15:40:03.021 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    FollowSymbolicLinks: [yes]
+15:40:03.021 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    FileReadinessCheckType: [None]
+15:40:03.021 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    FileReadinessCheckDelay: [0]
+15:40:03.021 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    DeliveryMode: [Log File Name]
+15:40:03.039 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source agent setup command (ukwpfdsl01.ebms.tv ukwpfdsl02.ebms.tv) [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    Establishing communication between fgbw1fsmed1002.national.core.bbc.co.uk and ukwpfdsl01.ebms.tv ukwpfdsl02.ebms.tv
+15:40:03.238 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel to ukwpfdsl01.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:03.323 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel to ukwpfdsl01.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:03.347 (7) Message from ukwpfdsl01.ebms.tv - File agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel from fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+15:40:12.001 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetAgent: [ukmcfdsl02.ebms.tv]
+15:40:12.001 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetAgentPlatform: [x86_64-Linux-RH6]
+15:40:12.001 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetAgentUserid: [root]
+15:40:12.001 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetDirectory: [/stornext/MC_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+15:40:12.002 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    VerifyTargetDirectoryExists: [no]
+15:40:12.002 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    VerifyForSufficientDiskSpace: [no]
+15:40:12.002 (7) Message from ukmcfdsl02.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    Transferring files...
+15:40:12.035 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The negotiated UDP message size for the connection to ukmcfdsl02.ebms.tv is 1472 bytes.
+15:40:12.667 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetAgent: [ukwpfdsl01.ebms.tv]
+15:40:12.667 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetAgentPlatform: [x86_64-Linux-RH6]
+15:40:12.667 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetAgentUserid: [root]
+15:40:12.667 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetDirectory: [/stornext/WP_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+15:40:12.667 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    VerifyTargetDirectoryExists: [no]
+15:40:12.667 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    VerifyForSufficientDiskSpace: [no]
+15:40:12.668 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    Transferring files...
+15:40:12.668 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The negotiated UDP message size for the connection to ukwpfdsl01.ebms.tv is 1472 bytes.
+15:40:16.392 (7) Message from ukmcfdsl02.ebms.tv - Target agent setup command (fgbw1fsmed1001.national.core.bbc.co.uk) [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    PathMappingOptions:
+15:40:22.685 (7) Message from ukwpfdsl01.ebms.tv - Target agent setup command (fgbw1fsmed1002.national.core.bbc.co.uk) [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    PathMappingOptions:
+16:08:26.248 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source finalize command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+
+16:08:26.362 (4) Finished job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder
+16:08:26.362 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_2.AFTER_GROUP_Group2 (decision)
+16:21:53.734 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Source finalize command [ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+
+16:21:53.849 (4) Finished job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder
+16:21:53.849 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.Transfer_1.AFTER_GROUP_Group3 (decision)
+16:21:53.849 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.AFTER_GROUP_Group (decision)
+16:21:54.005 (4) Starting group: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.AFTER_GROUP_Group.GROUP_JobReport3 (decision)
+16:21:54.006 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.AFTER_GROUP_Group.GROUP_JobReport3.JobReport3' property mapping command
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions=''
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.EmailTo='contentdeliveryoperations@bbc.co.uk'
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.EmailCc='EngstaffPCSDevOps@bbc.co.uk'
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.EmailBcc=''
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.EmailSubject=''
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.EmailCondition='On Error'
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.ReportVersionsToMaintain='0'
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.reportingTimezone='GMT'
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.considerDeletions='yes'
+16:21:54.047 (7) Adding package variable: Inputs.ReportOptions.emailJobFailureReportTo=''
+16:21:54.047 (7) Adding package variable: Inputs.sNMPTrapOptions.sNMPTrapReceivers=''
+16:21:54.047 (7) Adding package variable: Inputs.sNMPTrapOptions.sNMPTrapCommunityString=''
+16:21:54.047 (7) Adding package variable: Inputs.sNMPTrapOptions.sNMPTrapTypes=''
+16:21:54.162 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.AFTER_GROUP_Group.GROUP_JobReport3.JobReport3' preparation command command
+16:21:54.212 (7) Adding package variable: DdsTempDir='/tmp'
+16:21:54.327 (4) Starting job component: ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.AFTER_GROUP_Group.GROUP_JobReport3.JobReport3*
+16:21:54.327 (4) Executing component instance 'ToEricssonPlayoutDual.GROUP_FBDiAChooseSourceAgent.GROUP_FileList.Group.AFTER_GROUP_Group.GROUP_JobReport3.JobReport3' supervisor command command
+16:21:54.430 (7) Executing JobReport component: JobReport3
+16:21:54.444 (7) Email To: [contentdeliveryoperations@bbc.co.uk]
+16:21:54.444 (7) Email Cc: [EngstaffPCSDevOps@bbc.co.uk]
+16:21:54.444 (7) Email Bcc: []
+16:21:54.445 (7) Email Job Failure Report To: []
+16:21:54.445 (7) Email Subject: [ToEricssonPlayoutDual301714_1]
+16:21:54.445 (7) Email Condition: [On Error]
+16:21:54.445 (7) Report Versions To Maintain: [0]
+16:21:54.445 (7) Reporting Timezone: [GMT]
+16:21:54.445 (7) SNMP Trap Receivers: []
+16:21:54.445 (7) SNMP Trap Types: []
+16:21:56.467 (7) Job Report component completed successfully
+16:21:56.583 (4) Finished job component: JobReport3
+16:21:56.748 (4) Finished group: Group
+16:21:56.748 (4) Workflow ToEricssonPlayoutDual has completed successfully.
+16:21:56.748 (4) Group execution results:
+    Total groups in context:         19
+    Number executed:                  9
+    Errors:                           0
+16:21:56.748 (4) Job component execution results:
+    Total components in context:     12
+    Number executed:                  7
+    Errors:                           0
+  Executing at the 'manager_exit' point -- the exit code is 0

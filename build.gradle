@@ -9,7 +9,9 @@ buildscript {
 
 apply plugin: 'application'
 apply plugin: 'groovy'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
+
+mainClassName = 'com.stogiapps.mxfloganalyzer.Application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -18,8 +20,13 @@ repositories {
     jcenter()
 }
 
+configurations {
+    all*.exclude(group: 'ch.qos.logback')
+    all*.exclude(module: 'spring-boot-starter-logging')
+}
+
 dependencies {
-    compile('org.springframework.boot:spring-boot-devtools')
+    compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-log4j2')
 
     compile('org.codehaus.groovy:groovy:2.4.12')
@@ -39,4 +46,10 @@ jar {
 
 distTar {
     enabled = false
+}
+
+run {
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+')
+    }
 }

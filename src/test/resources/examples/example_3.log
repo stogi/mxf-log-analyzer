@@ -1,0 +1,411 @@
+13:52:25.834 (0) GMT Jul 7, 2017 Signiant Supervisor V11.4.0[70633] (logbase: FBDs-W1_FBDS_to_Ericsson.3604) starts on lmc01n02.national.core.bbc.co.uk
+  The Signiant supervisor V11.4.0[70633] (logbase: FBDs-W1_FBDS_to_Ericsson.3604).
+13:52:25.834 (0) Extracting context 'admin+Media_Mover_workflow_DualDelivery_FoldersOption' 'MediaDropBox'
+  SCHD_CTRL_PORT=39129
+  Execution counts - groups: 18. links: 0, job components: 11
+13:52:26.617 (4) Starting group: MediaDropBox (decision)
+13:52:26.784 (4) Starting group: MediaDropBox.GROUP_FileList (decision)
+13:52:26.785 (4) Executing component instance 'MediaDropBox.GROUP_FileList.FileList' property mapping command
+13:52:26.842 (7) Adding package variable: Inputs.Source=''
+13:52:26.842 (7) Adding package variable: Inputs.Source.tgt_node_list='MSS_W1_Agents!9'
+13:52:26.842 (7) Adding package variable: Inputs.Source.SourcePaths='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal'
+13:52:26.842 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+13:52:26.842 (7) Adding package variable: Inputs.Source.ExcludeFiles='#*'
+13:52:26.843 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='None'
+13:52:26.843 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+13:52:26.843 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='Consecutive Seek'
+13:52:26.843 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='10'
+13:52:26.843 (7) Adding package variable: Inputs.Source.tgt_user='%dds_default_user%'
+13:52:26.843 (7) Adding package variable: Inputs.Source.fileDate=''
+13:52:26.843 (7) Adding package variable: Inputs.Transport=''
+13:52:26.843 (7) Adding package variable: Inputs.Options=''
+13:52:26.958 (4) Starting job component: MediaDropBox.GROUP_FileList.FileList
+13:52:27.351 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [MediaDropBox.GROUP_FileList.FileList]:
+    The channel to fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:27.417 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [MediaDropBox.GROUP_FileList.FileList]:
+    The channel to fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:27.419 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Command agent [MediaDropBox.GROUP_FileList.FileList]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:27.467 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target initialization command [MediaDropBox.GROUP_FileList.FileList]:
+    Executing FileList component: FileList
+13:52:27.479 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target initialization command [MediaDropBox.GROUP_FileList.FileList]:
+    DdsSourceTempDir=/tmp
+13:52:37.570 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target process command [MediaDropBox.GROUP_FileList.FileList]:
+    Generating File List...
+13:52:37.570 (7) SourceAgent: [fgbw1fsmed1002.national.core.bbc.co.uk]
+13:52:37.570 (7) SourceAgentPlatform: [x86_64-Linux-RH6]
+13:52:37.570 (7) SourceAgentUserid: [sigadmin]
+13:52:37.570 (7) SourceHost: [MSS_W1_Agents!9]
+13:52:37.570 (7) SourcePaths: [/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal]
+13:52:37.570 (7) IncludeFiles: [*]
+13:52:37.570 (7) ExcludeFiles: [#*]
+13:52:37.570 (7) ExcludeSubdirectories: [None]
+13:52:37.571 (7) ExcludeSubDirList: []
+13:52:37.572 (7) FileReadinessCheckType: [Consecutive Seek]
+13:52:37.572 (7) FileReadinessCheckDelay: [10]
+13:52:47.689 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target agent completion command [MediaDropBox.GROUP_FileList.FileList]:
+
+13:52:47.819 (4) Finished job component: MediaDropBox.GROUP_FileList.FileList
+13:52:47.978 (4) Starting group:    MediaDropBox.GROUP_FileList.Group (concurrent).
+13:52:47.978 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_1 (decision)
+13:52:48.099 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_2 (decision)
+13:52:48.256 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1 (decision)
+13:52:48.257 (4) Executing component instance 'MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1' property mapping command
+13:52:48.314 (7) Adding package variable: Inputs.Source=''
+13:52:48.314 (7) Adding package variable: Inputs.Source.tgt_node_list='MSS_W1_Agents!9'
+13:52:48.314 (7) Adding package variable: Inputs.Source.baseFolder='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal'
+13:52:48.314 (7) Adding package variable: Inputs.Source.SourcePaths='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal'
+13:52:48.314 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+13:52:48.314 (7) Adding package variable: Inputs.Source.ExcludeFiles='#*'
+13:52:48.314 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='None'
+13:52:48.314 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+13:52:48.314 (7) Adding package variable: Inputs.Source.fileDateFilter=''
+13:52:48.314 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+13:52:48.314 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='0'
+13:52:48.314 (7) Adding package variable: Inputs.Source.tgt_user='%dds_default_user%'
+13:52:48.314 (7) Adding package variable: Inputs.Source.includeFoldersinOutputList='no'
+13:52:48.314 (7) Adding package variable: Inputs.Source.outputManifestFile='no'
+13:52:48.314 (7) Adding package variable: Inputs.Transport=''
+13:52:48.314 (7) Adding package variable: Inputs.Options=''
+13:52:48.420 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2 (decision)
+13:52:48.421 (4) Executing component instance 'MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2' property mapping command
+13:52:48.467 (7) Adding package variable: Inputs.Source=''
+13:52:48.467 (7) Adding package variable: Inputs.Source.tgt_node_list='MSS_W1_Agents!9'
+13:52:48.467 (7) Adding package variable: Inputs.Source.baseFolder='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal'
+13:52:48.467 (7) Adding package variable: Inputs.Source.SourcePaths='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal'
+13:52:48.467 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+13:52:48.467 (7) Adding package variable: Inputs.Source.ExcludeFiles='#*'
+13:52:48.467 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='None'
+13:52:48.467 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+13:52:48.467 (7) Adding package variable: Inputs.Source.fileDateFilter=''
+13:52:48.467 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+13:52:48.467 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='0'
+13:52:48.467 (7) Adding package variable: Inputs.Source.tgt_user='%dds_default_user%'
+13:52:48.467 (7) Adding package variable: Inputs.Source.includeFoldersinOutputList='no'
+13:52:48.467 (7) Adding package variable: Inputs.Source.outputManifestFile='no'
+13:52:48.467 (7) Adding package variable: Inputs.Transport=''
+13:52:48.467 (7) Adding package variable: Inputs.Options=''
+13:52:48.578 (4) Starting job component: MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1
+13:52:49.142 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    The channel to fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:49.203 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    The channel to fgbw1fsmed1001.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:49.203 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Command agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:49.276 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    Executing FileList component: FileListToManifest1
+13:52:49.276 (4) Starting job component: MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2
+13:52:49.597 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    The channel to fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:49.662 (7) Message from sig01vip.national.core.bbc.co.uk - Command control agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    The channel to fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:49.663 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Command agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:49.701 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    Executing FileList component: FileListToManifest2
+13:52:51.872 (7) Message from fgbw1fsmed1001.national.core.bbc.co.uk - Target process command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1]:
+    Generating File List...
+13:52:51.873 (7) SourceAgent: [fgbw1fsmed1001.national.core.bbc.co.uk]
+13:52:51.873 (7) SourceAgentPlatform: [x86_64-Linux-RH6]
+13:52:51.873 (7) SourceAgentUserid: [sigadmin]
+13:52:51.873 (7) SourceHost: [MSS_W1_Agents!9]
+13:52:51.873 (7) SourcePaths: [/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal]
+13:52:51.874 (7) IncludeFiles: [*]
+13:52:51.874 (7) ExcludeFiles: [#*]
+13:52:51.874 (7) ExcludeSubdirectories: [None]
+13:52:51.874 (7) ExcludeSubDirList: []
+13:52:51.874 (7) FileReadinessCheckType: [None]
+13:52:51.874 (7) FileReadinessCheckDelay: [0]
+13:52:52.023 (4) Finished job component: MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.FileListToManifest1
+13:52:52.188 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder (decision)
+13:52:52.190 (4) Executing component instance 'MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder' property mapping command
+13:52:52.237 (7) Adding package variable: Inputs.Source=''
+13:52:52.237 (7) Adding package variable: Inputs.Source.src_node_list='MSS_W1_Agents!9'
+13:52:52.237 (7) Adding package variable: Inputs.Source.SourceData='<SIGLIST TYPE='PATHLIST' XATTRS='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal' ><EL S='26268777800' T='F' MT='2017-07-07T13:36:44Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:20:10Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:19:11Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:23:59Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:31:01Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.md5' /><EL S='13097400742' T='F' MT='2017-07-07T13:15:32Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.mxf' /><EL S='17596387946' T='F' MT='2017-07-07T13:17:16Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:18:59Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.md5' /><EL S='11721065852' T='F' MT='2017-07-07T13:16:41Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:22:31Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.md5' /><EL S='39454954066' T='F' MT='2017-07-07T13:20:07Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.mxf' /><EL S='12860611924' T='F' MT='2017-07-07T13:21:19Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.mxf' /><EL S='22280662416' T='F' MT='2017-07-07T13:31:32Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:18:17Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.md5' /><EL S='32' T='F' MT='2017-07-07T13:23:01Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:34:20Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:18:14Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.md5' /><EL S='28006304840' T='F' MT='2017-07-07T13:14:56Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.mxf' /><EL S='32' T='F' MT='2017-07-07T13:16:47Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.md5' /><EL S='13320574186' T='F' MT='2017-07-07T13:21:32Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.mxf' /><EL S='11247488330' T='F' MT='2017-07-07T13:28:46Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.mxf' /><EL S='15957217560' T='F' MT='2017-07-07T13:17:46Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.mxf' /><EL S='14900011009' T='F' MT='2017-07-07T13:18:34Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:39:15Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.md5' /> </SIGLIST>'
+13:52:52.237 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+13:52:52.237 (7) Adding package variable: Inputs.Source.ExcludeFiles='#*'
+13:52:52.237 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='None'
+13:52:52.237 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+13:52:52.237 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+13:52:52.237 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='10'
+13:52:52.238 (7) Adding package variable: Inputs.Source.SourceDeletionsPostTransfer='none'
+13:52:52.238 (7) Adding package variable: Inputs.Source.SourceDeletionExcludeDirectories=''
+13:52:52.238 (7) Adding package variable: Inputs.Source.src_user='%dds_default_user%'
+13:52:52.238 (7) Adding package variable: Inputs.Target=''
+13:52:52.238 (7) Adding package variable: Inputs.Target.tgt_node_list='Ericsson_South!9'
+13:52:52.238 (7) Adding package variable: Inputs.Target.TargetDirectory='/stornext/WP_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL'
+13:52:52.238 (7) Adding package variable: Inputs.Target.PathMappingOptions=''
+13:52:52.238 (7) Adding package variable: Inputs.Target.maximumJobDateTimeDirectories='10'
+13:52:52.238 (7) Adding package variable: Inputs.Target.RemoveTargetFiles='no'
+13:52:52.238 (7) Adding package variable: Inputs.Target.removeExpiredDirsonTarget='no'
+13:52:52.238 (7) Adding package variable: Inputs.Target.RemoveOlderThan='30'
+13:52:52.238 (7) Adding package variable: Inputs.Target.tgt_user='%dds_default_user%'
+13:52:52.238 (7) Adding package variable: Inputs.Target.discardSubFolders='yes'
+13:52:52.238 (7) Adding package variable: Inputs.Transport=''
+13:52:52.238 (7) Adding package variable: Inputs.Transport.udp_transfer='yes'
+13:52:52.238 (7) Adding package variable: Inputs.Transport.udp_aggressiveness='medium'
+13:52:52.238 (7) Adding package variable: Inputs.Transport.throughput_tgt='0'
+13:52:52.238 (7) Adding package variable: Inputs.Transport.bw_floor='0'
+13:52:52.238 (7) Adding package variable: Inputs.Transport.bw_throttle='0'
+13:52:52.238 (7) Adding package variable: Inputs.Transport.bw_throttle_tod='00:00;00:00;YYYYYYY;0;'
+13:52:52.238 (7) Adding package variable: Inputs.Options=''
+13:52:52.238 (7) Adding package variable: Inputs.Options.certified_delivery='unsigned'
+13:52:52.238 (7) Adding package variable: Inputs.Options.check_type='timesize'
+13:52:52.238 (7) Adding package variable: Inputs.Options.compression='no'
+13:52:52.238 (7) Adding package variable: Inputs.Options.follow_symlinks='yes'
+13:52:52.238 (7) Adding package variable: Inputs.Options.transferFilesInSortedOrder='yes'
+13:52:52.238 (7) Adding package variable: Inputs.Options.rsync='no'
+13:52:52.238 (7) Adding package variable: Inputs.Options.src_file_inuse_action='error'
+13:52:52.238 (7) Adding package variable: Inputs.Options.synchronize='no'
+13:52:52.238 (7) Adding package variable: Inputs.Options.tgt_file_inuse_action='error'
+13:52:52.238 (7) Adding package variable: Inputs.Options.RemoveParentFolder='yes'
+13:52:52.238 (7) Adding package variable: Inputs.Options.verifyforsufficientdiskspacebeforeJobtransfersstart='no'
+13:52:52.238 (7) Adding package variable: Inputs.Options.verifytargetdirectoryexists='no'
+13:52:52.435 (4) Starting job component: MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder [(fgbw1fsmed1001.national.core.bbc.co.uk fgbw1fsmed1002.national.core.bbc.co.uk)]
+13:52:52.524 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - File agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:52.552 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The maximum concurrent agent count has been reduced from 8 to 5 because fgbw1fsmed1002 only supports 64 threads per process.
+13:52:52.578 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    Executing SigniantDistribute component: Transfer_1_nosubfolder
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    JobDateTimeStamp: [17-07-07_13-54-43.23540]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceAgent: [fgbw1fsmed1002.national.core.bbc.co.uk]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceAgentPlatform: [x86_64-Linux-RH6]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceAgentUserid: [sigadmin]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceHost: [MSS_W1_Agents!9]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceData: [/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.md5]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    IncludeFiles: [*]
+13:52:52.589 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    ExcludeFiles: [#*]
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    ExcludeSubdirectories: [None]
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    ExcludeSubDirList: []
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetHosts: [Ericsson_South!9]
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetDirectory: [/stornext/WP_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    PathMappingOptions: []
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SkipParentFolder: [yes]
+13:52:52.590 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceDeletionsPostTransfer: [none]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    SourceDeletionExcludeDirectories: []
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    RemoveTargetFiles: [no]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    RemoveTargetDirs: [no]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    RemoveOlderThan: [30]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    JobLogDetail: [INFO]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    MaximumBandwidthLimit: [00:00;00:00;YYYYYYY;0;]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    WANAcceleratorOn: [yes]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    WANAcceleratorAggressiveness: [medium]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    BandwidthCeiling: [0]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    BandwidthFloor: [0]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    CompressFiles: [no]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    FollowSymbolicLinks: [yes]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    FileReadinessCheckType: [None]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    FileReadinessCheckDelay: [10]
+13:52:52.591 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    DeliveryMode: [Log File Name]
+13:52:52.605 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source agent setup command (ukwpfdsl01.ebms.tv ukwpfdsl02.ebms.tv) [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    Establishing communication between fgbw1fsmed1002.national.core.bbc.co.uk and ukwpfdsl01.ebms.tv ukwpfdsl02.ebms.tv
+13:52:52.617 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel to ukwpfdsl01.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:52.643 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel to ukwpfdsl01.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:52.645 (7) Message from ukwpfdsl01.ebms.tv - File agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The channel from fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:52:59.758 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Target process command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2]:
+    Generating File List...
+13:52:59.758 (7) SourceAgent: [fgbw1fsmed1002.national.core.bbc.co.uk]
+13:52:59.758 (7) SourceAgentPlatform: [x86_64-Linux-RH6]
+13:52:59.758 (7) SourceAgentUserid: [sigadmin]
+13:52:59.758 (7) SourceHost: [MSS_W1_Agents!9]
+13:52:59.758 (7) SourcePaths: [/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal]
+13:52:59.759 (7) IncludeFiles: [*]
+13:52:59.759 (7) ExcludeFiles: [#*]
+13:52:59.759 (7) ExcludeSubdirectories: [None]
+13:52:59.759 (7) ExcludeSubDirList: []
+13:52:59.759 (7) FileReadinessCheckType: [None]
+13:52:59.759 (7) FileReadinessCheckDelay: [0]
+13:52:59.924 (4) Finished job component: MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.FileListToManifest2
+13:53:00.100 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder (decision)
+13:53:00.102 (4) Executing component instance 'MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder' property mapping command
+13:53:00.149 (7) Adding package variable: Inputs.Source=''
+13:53:00.149 (7) Adding package variable: Inputs.Source.src_node_list='MSS_W1_Agents!9'
+13:53:00.149 (7) Adding package variable: Inputs.Source.SourceData='<SIGLIST TYPE='PATHLIST' XATTRS='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal' ><EL S='26268777800' T='F' MT='2017-07-07T13:36:44Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:20:10Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:19:11Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:23:59Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:31:01Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.md5' /><EL S='13097400742' T='F' MT='2017-07-07T13:15:32Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.mxf' /><EL S='17596387946' T='F' MT='2017-07-07T13:17:16Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:18:59Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.md5' /><EL S='11721065852' T='F' MT='2017-07-07T13:16:41Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:22:31Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.md5' /><EL S='39454954066' T='F' MT='2017-07-07T13:20:07Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.mxf' /><EL S='12860611924' T='F' MT='2017-07-07T13:21:19Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.mxf' /><EL S='22280662416' T='F' MT='2017-07-07T13:31:32Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:18:17Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.md5' /><EL S='32' T='F' MT='2017-07-07T13:23:01Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:34:20Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.md5' /><EL S='32' T='F' MT='2017-07-07T13:18:14Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.md5' /><EL S='28006304840' T='F' MT='2017-07-07T13:14:56Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.mxf' /><EL S='32' T='F' MT='2017-07-07T13:16:47Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.md5' /><EL S='13320574186' T='F' MT='2017-07-07T13:21:32Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.mxf' /><EL S='11247488330' T='F' MT='2017-07-07T13:28:46Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.mxf' /><EL S='15957217560' T='F' MT='2017-07-07T13:17:46Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.mxf' /><EL S='14900011009' T='F' MT='2017-07-07T13:18:34Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.mxf' /><EL S='32' T='F' MT='2017-07-07T13:39:15Z' V='/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.md5' /> </SIGLIST>'
+13:53:00.150 (7) Adding package variable: Inputs.Source.IncludeFiles='*'
+13:53:00.150 (7) Adding package variable: Inputs.Source.ExcludeFiles='#*'
+13:53:00.151 (7) Adding package variable: Inputs.Source.ExcludeSubdirectories='None'
+13:53:00.151 (7) Adding package variable: Inputs.Source.ExcludeSubDirList=''
+13:53:00.152 (7) Adding package variable: Inputs.Source.FileReadinessCheckType='None'
+13:53:00.152 (7) Adding package variable: Inputs.Source.FileReadinessCheckDelay='0'
+13:53:00.152 (7) Adding package variable: Inputs.Source.SourceDeletionsPostTransfer='none'
+13:53:00.152 (7) Adding package variable: Inputs.Source.SourceDeletionExcludeDirectories=''
+13:53:00.152 (7) Adding package variable: Inputs.Source.src_user='%dds_default_user%'
+13:53:00.152 (7) Adding package variable: Inputs.Target=''
+13:53:00.152 (7) Adding package variable: Inputs.Target.tgt_node_list='Ericsson_North!9'
+13:53:00.152 (7) Adding package variable: Inputs.Target.TargetDirectory='/stornext/MC_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL'
+13:53:00.152 (7) Adding package variable: Inputs.Target.PathMappingOptions=''
+13:53:00.152 (7) Adding package variable: Inputs.Target.maximumJobDateTimeDirectories='10'
+13:53:00.152 (7) Adding package variable: Inputs.Target.RemoveTargetFiles='no'
+13:53:00.152 (7) Adding package variable: Inputs.Target.removeExpiredDirsonTarget='no'
+13:53:00.152 (7) Adding package variable: Inputs.Target.RemoveOlderThan='30'
+13:53:00.152 (7) Adding package variable: Inputs.Target.tgt_user='%dds_default_user%'
+13:53:00.152 (7) Adding package variable: Inputs.Target.discardSubFolders='yes'
+13:53:00.152 (7) Adding package variable: Inputs.Transport=''
+13:53:00.152 (7) Adding package variable: Inputs.Transport.udp_transfer='yes'
+13:53:00.152 (7) Adding package variable: Inputs.Transport.udp_aggressiveness='medium'
+13:53:00.152 (7) Adding package variable: Inputs.Transport.throughput_tgt='0'
+13:53:00.152 (7) Adding package variable: Inputs.Transport.bw_floor='0'
+13:53:00.152 (7) Adding package variable: Inputs.Transport.bw_throttle=''
+13:53:00.152 (7) Adding package variable: Inputs.Transport.bw_throttle_tod='00:00;00:00;YYYYYYY;0;'
+13:53:00.152 (7) Adding package variable: Inputs.Options=''
+13:53:00.152 (7) Adding package variable: Inputs.Options.certified_delivery='unsigned'
+13:53:00.152 (7) Adding package variable: Inputs.Options.check_type='timesize'
+13:53:00.152 (7) Adding package variable: Inputs.Options.compression='no'
+13:53:00.152 (7) Adding package variable: Inputs.Options.follow_symlinks='yes'
+13:53:00.152 (7) Adding package variable: Inputs.Options.transferFilesInSortedOrder='yes'
+13:53:00.152 (7) Adding package variable: Inputs.Options.rsync='no'
+13:53:00.152 (7) Adding package variable: Inputs.Options.src_file_inuse_action='error'
+13:53:00.152 (7) Adding package variable: Inputs.Options.synchronize='no'
+13:53:00.152 (7) Adding package variable: Inputs.Options.tgt_file_inuse_action='error'
+13:53:00.152 (7) Adding package variable: Inputs.Options.RemoveParentFolder='yes'
+13:53:00.152 (7) Adding package variable: Inputs.Options.verifyforsufficientdiskspacebeforeJobtransfersstart='no'
+13:53:00.152 (7) Adding package variable: Inputs.Options.verifytargetdirectoryexists='no'
+13:53:00.310 (4) Starting job component: MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder [(fgbw1fsmed1001.national.core.bbc.co.uk fgbw1fsmed1002.national.core.bbc.co.uk)]
+13:53:00.390 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - File agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel from sig01vip.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:53:00.411 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The maximum concurrent agent count has been reduced from 8 to 5 because fgbw1fsmed1002 only supports 64 threads per process.
+13:53:00.439 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    Executing SigniantDistribute component: Transfer_2_nosubfolder
+13:53:00.448 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    JobDateTimeStamp: [17-07-07_13-54-51.23565]
+13:53:00.448 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceAgent: [fgbw1fsmed1002.national.core.bbc.co.uk]
+13:53:00.448 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceAgentPlatform: [x86_64-Linux-RH6]
+13:53:00.448 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceAgentUserid: [sigadmin]
+13:53:00.449 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceHost: [MSS_W1_Agents!9]
+13:53:00.449 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceData: [/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE773L_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKRD518T_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRB309X_02.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAS911X_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQI483F_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/NGKM492K_71.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBAP963D_01.md5,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF261T_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBIE271R_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CBRC043X_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/CAQF509E_01.mxf,/mnt/signiant/dds/prod_traffic/ericsson/programmes/embedded/normal/FKIW776N_01.md5]
+13:53:00.449 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    IncludeFiles: [*]
+13:53:00.449 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    ExcludeFiles: [#*]
+13:53:00.449 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    ExcludeSubdirectories: [None]
+13:53:00.449 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    ExcludeSubDirList: []
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetHosts: [Ericsson_North!9]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetDirectory: [/stornext/MC_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    PathMappingOptions: []
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SkipParentFolder: [yes]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceDeletionsPostTransfer: [none]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    SourceDeletionExcludeDirectories: []
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    RemoveTargetFiles: [no]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    RemoveTargetDirs: [no]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    RemoveOlderThan: [30]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    JobLogDetail: [INFO]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    MaximumBandwidthLimit: [00:00;00:00;YYYYYYY;0;]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    WANAcceleratorOn: [yes]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    WANAcceleratorAggressiveness: [medium]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    BandwidthCeiling: [0]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    BandwidthFloor: [0]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    CompressFiles: [no]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    FollowSymbolicLinks: [yes]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    FileReadinessCheckType: [None]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    FileReadinessCheckDelay: [0]
+13:53:00.450 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    DeliveryMode: [Log File Name]
+13:53:00.463 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source agent setup command (ukmcfdsl02.ebms.tv ukmcfdsl01.ebms.tv) [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    Establishing communication between fgbw1fsmed1002.national.core.bbc.co.uk and ukmcfdsl02.ebms.tv ukmcfdsl01.ebms.tv
+13:53:00.493 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel to ukmcfdsl01.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:53:00.535 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel to ukmcfdsl01.ebms.tv is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:53:00.541 (7) Message from ukmcfdsl01.ebms.tv - File agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The channel from fgbw1fsmed1002.national.core.bbc.co.uk is mutually authenticated (Cipher=AES256-SHA, Keysize=256/256).
+13:53:02.708 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetAgent: [ukwpfdsl01.ebms.tv]
+13:53:02.708 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetAgentPlatform: [x86_64-Linux-RH6]
+13:53:02.708 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetAgentUserid: [root]
+13:53:02.708 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    TargetDirectory: [/stornext/WP_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+13:53:02.708 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    VerifyTargetDirectoryExists: [no]
+13:53:02.711 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    The negotiated UDP message size for the connection to ukwpfdsl01.ebms.tv is 1472 bytes.
+13:53:02.712 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    VerifyForSufficientDiskSpace: [no]
+13:53:02.712 (7) Message from ukwpfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    Transferring files...
+13:53:10.631 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetAgent: [ukmcfdsl01.ebms.tv]
+13:53:10.631 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetAgentPlatform: [x86_64-Linux-RH6]
+13:53:10.631 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetAgentUserid: [root]
+13:53:10.633 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    TargetDirectory: [/stornext/MC_MG_INCOMING/BBC/BBC_NETWORK/PROGRAMMES/EMBEDDED/NORMAL]
+13:53:10.633 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    VerifyTargetDirectoryExists: [no]
+13:53:10.635 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    VerifyForSufficientDiskSpace: [no]
+13:53:10.635 (7) Message from ukmcfdsl01.ebms.tv - Target initialization command [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    Transferring files...
+13:53:10.657 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source file agent [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    The negotiated UDP message size for the connection to ukmcfdsl01.ebms.tv is 1472 bytes.
+13:53:12.736 (7) Message from ukwpfdsl01.ebms.tv - Target agent setup command (fgbw1fsmed1002.national.core.bbc.co.uk) [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+    PathMappingOptions:
+13:53:20.657 (7) Message from ukmcfdsl01.ebms.tv - Target agent setup command (fgbw1fsmed1002.national.core.bbc.co.uk) [MediaDropBox.GROUP_FileList.Group.Transfer_2.GROUP_FileListToManifest2.GROUP_Transfer_2_nosubfolder.Transfer_2_nosubfolder]:
+    PathMappingOptions:
+15:49:43.323 (7) Message from fgbw1fsmed1002.national.core.bbc.co.uk - Source finalize command [MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder]:
+
+15:49:43.437 (4) Finished job component: MediaDropBox.GROUP_FileList.Group.Transfer_1.GROUP_FileListToManifest1.GROUP_Transfer_1_nosubfolder.Transfer_1_nosubfolder
+15:49:43.437 (4) Starting group: MediaDropBox.GROUP_FileList.Group.Transfer_1.AFTER_GROUP_Group3 (decision)
